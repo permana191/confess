@@ -1,0 +1,20 @@
+body {
+    overflow: hidden;
+}
+
+#confession {
+    min-height: 200px;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-20px); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+}
+
+.heart {
+    position: absolute;
+    color: pink;
+    font-size: 1.5rem;
+    animation: fadeInOut 5s ease-in-out infinite;
+}

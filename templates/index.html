@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-gradient-to-b from-pink-100 via-purple-100 to-blue-100 flex items-center justify-center min-h-screen">
+    <!-- Loading Screen -->
+    <div id="loading" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="text-center text-white">
+            <h2 id="loading-text" class="text-2xl font-light"></h2>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden text-center p-6 max-w-md mx-auto bg-white bg-opacity-30 rounded-lg shadow-lg backdrop-blur-md">
+        <div id="confession" class="text-lg font-light text-gray-800"></div>
+        <button id="mute-btn" class="mt-4 px-4 py-2 bg-pink-300 text-white rounded-full hover:bg-pink-400 transition">
+            Mute
+        </button>
+        <a href="https://wa.me/+6285174296675?text=Hai,%20aku%20udah%20baca%20pesannya" target="_blank" class="mt-4 inline-block px-6 py-2 bg-purple-300 text-white rounded-full hover:bg-purple-400 transition">
+            Balas
+        </a>
+    </div>
+
+    <!-- Audio -->
+    <audio id="backsound" autoplay loop>
+        <source src="{{ url_for('static', filename='audio/backsound.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <!-- Falling Hearts Canvas -->
+    <canvas id="hearts-canvas" class="fixed inset-0 pointer-events-none"></canvas>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
