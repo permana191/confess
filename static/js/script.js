@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'Aku gak tau gimana cara ngomong langsung...',
         'Jadi aku bikin ini.',
         'Aku suka kamu.',
-        'Udah lama...',
-        'Tapi baru berani sekarang buat ngungkapin.'
+        'Tapi baru berani sekarang buat ngungkapin.',
+        'jadi mau ga kamu jadi pacar aku.'
     ];
 
     // Typing animation
